@@ -1,18 +1,25 @@
 # list
 # create
-list_num = [0,1,2,3,4,5,6,7]
-list_char = ['a','b','c','d','e']
-list_str = ['Allen','Chen','John','Mark']
-print(list_num, list_char, list_str, sep='\n', end='\n\n')
+from re import A
 
-# access, update
-list_num[0] = 777
-list_char[3] = 'p'
-list_str[2] = "Spencer"
-print(list_num, list_char, list_str, sep='\n', end='\n\n')
 
-# delete
-del list_num[0]
-del list_char[-1]
-del list_str[-2]
-print(list_num, list_char, list_str, sep='\n', end='\n\n')
+numbers = [0, 1, 2, 3, 4]
+chars = ['a', 'b', 'c', 'd']
+users = ['Allen', 'Chen', 'John', 'May']
+students = ['Allen', 170, 'Chen', 165, 'John', 180, 'May', 150]
+# print(numbers, chars, users, students, sep='\n')
+
+# access, update -> index(자리번호) -> 0
+print(numbers[4])
+print(users[-4])
+users[-1] = 'Spencer'
+print(users)
+
+# delete -> index
+del users[-1]
+print(users)
+del users[0]
+print(users)
+
+del users
+print(users)
