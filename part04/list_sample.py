@@ -1,8 +1,5 @@
 # list
 # create
-from re import A
-
-
 numbers = [0, 1, 2, 3, 4]
 chars = ['a', 'b', 'c', 'd']
 users = ['Allen', 'Chen', 'John', 'May']
