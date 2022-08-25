@@ -1,13 +1,15 @@
-# python 3.10
-status = 303
+# match_case.py 3.10~
+# switch/case문
+status = 200
+
 match status:
     case 200:
-        print("success")
+        print(f"{status} Success")
     case 300:
-        print("redirect")
+        print(f"{status} Redirect")
     case 400:
-        print("client error")
+        print(f"{status} Client Error")
     case 500:
-        print("server error")
+        print(f"{status} Server Error")
     case _:
-        print("not match")
+        print(f"{status} 해당사항이 없습니다.")
