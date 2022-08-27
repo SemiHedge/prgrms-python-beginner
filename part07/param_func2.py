@@ -1,19 +1,9 @@
-def to_greeting():
-    user = "스펜서"
-    print("안녕하세요!")
-    print(f"오랜만이네요 {user}")
-    print("오늘 좋은 하루 되길 바라요~")
+# 삼각형 넓이 Define Function
+def calc_triangle(width, height):
+    area = width * height / 2
+    print(f'삼각형의 넓이는 {area}입니다.')
 
 
-to_greeting()
-
-
-def to_greeting(user):
-    print("안녕하세요!")
-    print(f"오랜만이네요 {user}")
-    print("오늘 좋은 하루 되길 바라요~")
-
-
-to_greeting('스펜서')
-to_greeting('머쓱이')
-to_greeting(user = '머쓱이')
+# 함수 실행
+calc_triangle(10, 20)
+calc_triangle(100, 200)

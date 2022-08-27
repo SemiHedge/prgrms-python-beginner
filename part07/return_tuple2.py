@@ -12,18 +12,30 @@ def convert_temperature(t, unit):
     elif unit == 'F':
         f = t
         c = (f - 32) / 1.8
-        k = f + 273.15
+        k = c + 273.15
     elif unit == 'K':
         k = t
         c = k - 273.15
-        f = (k - 273.15) * 1.8 + 32
+        f = c * 1.8 + 32
     else:
-        c, f, k = 0, 0, 0
+        c, f, k = False, False, False
+    
     return c, f, k
 
+# 함수 실행
+t = 25.5
+t_expr = convert_temperature(t, 'C')
+print(t_expr)
 
-t = 30.1
-u = 'C'
-t_expr = convert_temperature(t, u)
+t = 25.5
+t_expr = convert_temperature(t, 'F')
+print(t_expr)
+
+t = 25.5
+t_expr = convert_temperature(t, 'K')
+print(t_expr)
+
+t = 25.5
+t_expr = convert_temperature(t, 'A')
 print(t_expr)
 

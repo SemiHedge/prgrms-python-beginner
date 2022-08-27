@@ -1,10 +1,9 @@
-area = 10 * 8 / 2
-print(f'삼각형 넓이는 {area}입니다.')
-
-# Define Function
-def triangle_area():
+# 삼각형 넓이 Define Function
+def calc_triangle():
     area = 10 * 8 / 2
-    print(f'삼각형 넓이는 {area}입니다.')
+    print(f'삼각형의 넓이는 {area}입니다.')
 
-# 실행
-triangle_area()
+
+# 함수 실행
+calc_triangle()
+calc_triangle()
