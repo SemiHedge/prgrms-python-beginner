@@ -4,9 +4,10 @@ class Car:
         self.maker = maker
         self.model = model
         self.color = color
+        self.year = year
 
     def __repr__(self):
-        return f'{self.model}({self.maker, self.color})'
+        return f'{self.model}{self.year, self.maker, self.color}'
 
 
 # 인스턴스 생성 및 값 확인
