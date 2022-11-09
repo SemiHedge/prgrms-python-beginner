@@ -1,16 +1,21 @@
 import time
 
-print("start")
-time.sleep(2)
-print("end")
+# time.sleep(int|float)
+print('start')
+time.sleep(.5)
+print('end')
 
-start = time.time() # 유닉스시간 UTC 1970.1.1 00:00:00부터의 초
+# time.time()
+start = time.time()  # 유닉스시간 UTC 1970.1.1 00:00:00 ~ 몇초가 지났는가?
 print(start)
 
-# 시간 측정
+# 시각 측정
+print('----')
 start = time.time()
 total = 0
-for i in range(10000001):
+for i in range(100000):
     total += i
-    print(total)
-print(total, time.time()-start)
+    # print(total)
+print(total)
+end = time.time()
+print(end - start)

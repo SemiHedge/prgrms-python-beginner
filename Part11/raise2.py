@@ -1,25 +1,13 @@
-# raise KeyboardInterrupt
-# raise ValueError
-
-# 값을 음수로 받을 경우 ValueError를 띄워보자
+# 삼각형 넓이 Define Function  + raise
 def calc_triangle(width, height):
-    if width <= 0 or height <= 0:
+    if width < 0 or height < 0:
         raise ValueError("Negative numbers are not allowed.")
-    return width * height / 2
+    area = width * height / 2
+    return area
 
-tr1 = calc_triangle(3, 4)
-tr2 = calc_triangle(30, 40)
-print(tr1, tr2)
-tr3 = calc_triangle(-30, 40)  # ValueError
 
-# 만일 마땅한 예외 유형이 없다면, 거의 모든 예외 상황의 부모였던 Exception을 쓰자.
-# raise Exception
-def calc_triangle(width, height):
-    if not (width > 0 and height > 0):
-        raise Exception("Negative numbers are not allowed.")
-    return width * height / 2
-
-tr1 = calc_triangle(3, 4)
-tr2 = calc_triangle(30, 40)
-print(tr1, tr2)
-tr3 = calc_triangle(-30, 40)  # Exception
+# 함수 실행
+t1 = calc_triangle(10, 20)
+t2 = calc_triangle(100, 200)
+print(t1+t2)
+t3 = calc_triangle(-100, -200)

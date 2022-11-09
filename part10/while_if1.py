@@ -1,5 +1,5 @@
-# while 조건 > while True if
-# while 조건
+# while 조건 > while True if break
+# while 조건식
 goal_num = 10000000
 step = 2
 result = 1
@@ -10,7 +10,8 @@ while result < goal_num:
     count += 1
 print(f'count:{count} result:{result}')
 
-# while True if  # while 조건식과 if 조건식은 여집합/반대 관계
+
+# while True:
 goal_num = 10000000
 step = 2
 result = 1

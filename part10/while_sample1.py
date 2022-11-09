@@ -10,4 +10,3 @@ while result < goal_num:
     result *= step
     count += 1
 print(f'count:{count} result:{result}')
-

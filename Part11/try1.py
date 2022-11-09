@@ -1,34 +1,45 @@
 try:
-    1/0
+    1/0  # ZeroDivisionError
 except:
     pass
 
 try:
-    1 + "가"
-    # int('가'
+    1/0  # ZeroDivisionError
+except Exception as e:
+    print(e)
+print("정상 종료")
+
+
+try:
+    # 1 + "가"  # TypeError
+    int('가')  # ValueError
 except ValueError as ve:
     print(f'>>> {ve}')
 except Exception as e:
     print(f'>>> {e}')
 
 try:
-    num = 3
+    num = 3/0
     print(num)
 except Exception as e:
-    print(f'>>> {e}')
+    print(e)
 finally:
-    print('마무리 수행')
+    print('try문 종료 - 마무리 수행')
 
 
+# 최종정리
 try:
-   # 수행, 시도할 코드
-   pass
+    # 수행, 시도할 코드
+    pass
 except ValueError:
-   # ValueError 예외 처리
-   pass
+    # Valueerorr 예외처리
+    pass
 except (ZeroDivisionError, TypeError):
-   # ZeroDivisionError, TypeError 예외 처리(다중)
-   pass
+    # ZeroDivisionError, TypeError 다중 예외 처리
+    pass
 except:
-   # 그 외 모든 예외 처리
-   pass
+    # 그외 예외 + default 예외 처리
+    pass
+finally:
+    # 무조건적으로 마무리코드로 수행은 되야한다!
+    pass

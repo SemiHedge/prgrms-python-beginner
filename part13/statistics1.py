@@ -1,6 +1,9 @@
 import statistics
-nums = [1, 2, 3, 4, 5, 6, 7, 7, 7]
+nums = [1, 2, 3, 4, 7, 7, 9, 99, 5]
+
 print(sum(nums)/len(nums))
-print(statistics.mean(nums))  # 평균값
-print(statistics.median(nums))  # 중간값
+print(statistics.mean(nums))
+print(statistics.median(nums))  # 중앙값
 print(statistics.mode(nums))  # 최빈값
+
+
