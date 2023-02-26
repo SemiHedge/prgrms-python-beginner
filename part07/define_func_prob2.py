@@ -10,13 +10,9 @@
 | 판정 | BMI 값 |
 | --- | --- |
 | 저체중 | 80미만 |
-| 경한저체중 | 80이상 90미만 |
-| 정상저체중 | 90이상 110미만 |
+| 정상체중 | 90이상 110미만 |
 | 과체중 | 110이상 120미만 |
-| 경도비만 | 120이상 130미만 |
-| 중증도비만 | 130이상 150미만 |
-| 고도비만 | 150이상 200미만 |
-| 위험한 비만 | 200이상 |
+
 
 이 때 BMI 값을 계산하는 함수 `solution(height, weight)`를 구현합시다
 
@@ -59,7 +55,30 @@ import unittest
 
 class MyTest(unittest.TestCase):
     def test(self):
-				# a, b의 합을 반환하는 함수를 작성하는 문제일 때
+        try:
+            self.assertEqual(solution(177, 70), (101, '정상체중'))
+            print("(177, 70) -> (101, '정상체중') : 정답입니다.") # 맞으면 출력할 메시지
+        except:
+            print(f"(177, 70) -> {solution(177, 70)} : 틀렸습니다. 기대값 : (101, '정상체중')")
+            self.assertTrue(False)
+        try:
+            self.assertEqual(solution(180, 55), (76, '저체중'))
+            print("(180, 55) -> (76, '저체중') : 정답입니다.") # 맞으면 출력할 메시지
+        except:
+            print(f"(180, 55) -> {solution(180, 55)} : 틀렸습니다. 기대값 : (76, '저체중')")
+            self.assertTrue(False)
+        try:
+            self.assertEqual(solution(190, 101), (124, '과체중'))
+            print("(190, 101) -> (124, '과체중') : 정답입니다.") # 맞으면 출력할 메시지
+        except:
+            print(f"(190, 101) -> {solution(190, 101)} : 틀렸습니다. 기대값 : (124, '과체중')")
+            self.assertTrue(False)
+
+        
+
+    def test(self):
+        # a, b의 합을 반환하는 함수를 작성하는 문제일 때
+        
         self.assertEqual(solution(177, 70), (101, '정상체중'))
         self.assertEqual(solution(180, 55), (76, '저체중'))
         self.assertEqual(solution(190, 101), (124, '과체중'))
