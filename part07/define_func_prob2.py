@@ -55,33 +55,58 @@ import unittest
 
 class MyTest(unittest.TestCase):
     def test(self):
-        try:
-            self.assertEqual(solution(177, 70), (101, '정상체중'))
-            print("(177, 70) -> (101, '정상체중') : 정답입니다.") # 맞으면 출력할 메시지
-        except:
-            print(f"(177, 70) -> {solution(177, 70)} : 틀렸습니다. 기대값 : (101, '정상체중')")
-            self.assertTrue(False)
+        judge = True
+        
+        # case 1
         try:
             self.assertEqual(solution(180, 55), (76, '저체중'))
-            print("(180, 55) -> (76, '저체중') : 정답입니다.") # 맞으면 출력할 메시지
+            print(f"[정답] 입력 : (180, 55) 출력값 : {solution(180, 55)} | 기대값 : (76, '저체중')") # 맞으면 출력할 메시지
         except:
-            print(f"(180, 55) -> {solution(180, 55)} : 틀렸습니다. 기대값 : (76, '저체중')")
-            self.assertTrue(False)
+            print(f"[오답] 입력 : (180, 55) 출력값 : {solution(180, 55)} | 기대값 : (76, '저체중')")
+            judge = False
+            
+        # case 2
+        try:
+            self.assertEqual(solution(177, 70), (101, '정상체중'))
+            print(f"[정답] 입력 : (177, 70) 출력값 : {solution(177, 70)} | 기대값 : (101, '정상체중')") # 맞으면 출력할 메시지
+        except:
+            print(f"[오답] 입력 : (177, 70) 출력값 : {solution(177, 70)} | 기대값 : (101, '정상체중')")
+            judge = False 
+        
+        # case 3
         try:
             self.assertEqual(solution(190, 101), (124, '과체중'))
-            print("(190, 101) -> (124, '과체중') : 정답입니다.") # 맞으면 출력할 메시지
+            print(f"[정답] 입력 : (190, 101) 출력값 : {solution(190, 101)} | 기대값 : (124, '과체중')") # 맞으면 출력할 메시지
         except:
-            print(f"(190, 101) -> {solution(190, 101)} : 틀렸습니다. 기대값 : (124, '과체중')")
-            self.assertTrue(False)
+            print(f"[오답] 입력 : (190, 101) 출력값 : {solution(190, 101)} | 기대값 : (124, '과체중')") 
+            judge = False
 
-        
+        # case 4 print(solution(150, 45))
+        try:
+            self.assertEqual(solution(150, 45), (100, '정상체중'))
+            print(f"[정답] 입력 : (150, 45) 출력값 : {solution(150, 45)} | 기대값 : (100, '정상체중')") # 맞으면 출력할 메시지
+        except:
+            print(f"[오답] 입력 : (150, 45) 출력값 : {solution(150, 45)} | 기대값 : (100, '정상체중')") 
+            judge = False
 
-    def test(self):
-        # a, b의 합을 반환하는 함수를 작성하는 문제일 때
-        
-        self.assertEqual(solution(177, 70), (101, '정상체중'))
-        self.assertEqual(solution(180, 55), (76, '저체중'))
-        self.assertEqual(solution(190, 101), (124, '과체중'))
-        self.assertEqual(solution(150, 45), (100, '정상체중'))
-        self.assertEqual(solution(160, 55), (101, '정상체중'))
-        self.assertEqual(solution(165, 75), (128, '과체중'))
+
+        # case 5 print(solution(160, 55))
+        try:
+            self.assertEqual(solution(160, 55), (101, '정상체중'))
+            print(f"[정답] 입력 : (160, 55) 출력값 : {solution(160, 55)} | 기대값 : (101, '정상체중')") # 맞으면 출력할 메시지
+        except:
+            print(f"[오답] 입력 : (160, 55) 출력값 : {solution(160, 55)} | 기대값 : (101, '정상체중')") 
+            judge = False
+
+        # case 6 print(solution(165, 75))
+        try:
+            self.assertEqual(solution(165, 75), (128, '과체중'))
+            print(f"[정답] 입력 : (165, 75) 출력값 : {solution(165, 75)} | 기대값 : (128, '과체중')") # 맞으면 출력할 메시지
+        except:
+            print(f"[오답] 입력 : (165, 75) 출력값 : {solution(165, 75)} | 기대값 : (128, '과체중')") 
+            judge = False
+
+
+
+                    
+        self.assertTrue(judge)
